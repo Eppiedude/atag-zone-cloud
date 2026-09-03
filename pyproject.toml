@@ -1,0 +1,17 @@
+[project]
+name = "atag-zone-cloud"
+version = "0.1.0"
+description = "Read-only Home Assistant integration for ATAG Zone Cloud"
+requires-python = ">=3.13"
+license = "MIT"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]

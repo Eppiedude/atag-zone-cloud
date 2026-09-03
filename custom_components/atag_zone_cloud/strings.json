@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to ATAG Zone Cloud",
+        "description": "Enter the credentials for your ATAG Zone account and the system or plant ID.",
+        "data": {
+          "username": "Account e-mail or username",
+          "password": "Password",
+          "system_id": "System or plant ID"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to ATAG Zone Cloud",
+      "invalid_auth": "Invalid authentication"
+    },
+    "abort": {
+      "already_configured": "This ATAG Zone system is already configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "outdoor_temperature": {"name": "Outdoor temperature"},
+      "room_temperature_zone_1": {"name": "Room temperature zone 1"},
+      "room_temperature_zone_2": {"name": "Room temperature zone 2"},
+      "dhw_setpoint": {"name": "DHW setpoint"},
+      "signal_level": {"name": "Signal level"},
+      "relative_humidity_zone_1": {"name": "Relative humidity zone 1"},
+      "dhw_temperature": {"name": "DHW temperature"},
+      "heat_pump_mode": {
+        "name": "Heat pump mode",
+        "state": {
+          "off": "Off", "standby": "Standby", "cooling": "Cooling", "heating": "Heating",
+          "booster_heating": "Booster heating", "booster_cooling": "Booster cooling",
+          "rating_heating_mode": "Rating heating mode", "rating_cooling_mode": "Rating cooling mode",
+          "freeze_protection": "Freeze protection", "defrost": "Defrost",
+          "high_temperature_protection": "High temperature protection", "timeguard": "Timeguard",
+          "system_fail": "System fail", "hard_system_fail": "Hard system fail",
+          "pump_down": "Pump down", "soft_fail_mode": "Soft fail mode",
+          "rating_only_fan": "Rating only fan", "cascade_heating": "Cascade heating",
+          "cascade_cooling": "Cascade cooling"
+        }
+      },
+      "heat_pump_outside_air_temperature": {"name": "Heat pump outside air temperature"},
+      "heat_pump_water_flow_temperature": {"name": "Heat pump water flow temperature"},
+      "ch_flow_temperature": {"name": "CH flow temperature"},
+      "ch_flow_set_temperature": {"name": "CH flow set temperature"},
+      "hydraulic_scheme": {"name": "Hydraulic scheme"},
+      "heat_pump_quiet_mode": {"name": "Heat pump quiet mode"},
+      "buffer_activation": {"name": "Buffer activation"}
+    },
+    "binary_sensor": {
+      "heat_request_zone_1": {"name": "Heat request zone 1"},
+      "heat_request_zone_2": {"name": "Heat request zone 2"},
+      "heat_request_zone_3": {"name": "Heat request zone 3"}
+    }
+  }
+}
