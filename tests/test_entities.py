@@ -2,7 +2,6 @@
 
 from unittest.mock import MagicMock
 
-from homeassistant.components.binary_sensor import BinarySensorDeviceClass
 from homeassistant.components.sensor import SensorDeviceClass
 
 from custom_components.atag_zone_cloud.binary_sensor import AtagZoneBinarySensor
@@ -35,7 +34,7 @@ def test_humidity_sensor_creation():
 
 def test_heat_request_binary_sensor_creation():
     entity = AtagZoneBinarySensor(_coordinator({8: {"id": 8, "value": 1}}), _description(8), "YOUR_SYSTEM_ID")
-    assert entity.device_class is BinarySensorDeviceClass.HEAT
+    assert entity.device_class is None
     assert entity.is_on is True
 
 

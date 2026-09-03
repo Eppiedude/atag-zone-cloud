@@ -1,6 +1,6 @@
 """Binary sensor entities for ATAG Zone Cloud."""
 
-from homeassistant.components.binary_sensor import BinarySensorDeviceClass, BinarySensorEntity
+from homeassistant.components.binary_sensor import BinarySensorEntity
 
 from . import AtagZoneConfigEntry
 from .const import CONF_SYSTEM_ID, MENU_ITEMS, ItemKind, MenuItemDescription
@@ -22,7 +22,6 @@ class AtagZoneBinarySensor(AtagZoneEntity, BinarySensorEntity):
 
     def __init__(self, coordinator, description: MenuItemDescription, system_id: str) -> None:
         super().__init__(coordinator, description, system_id)
-        self._attr_device_class = BinarySensorDeviceClass.HEAT
 
     @property
     def is_on(self) -> bool | None:
