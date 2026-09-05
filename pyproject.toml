@@ -1,6 +1,6 @@
 [project]
 name = "atag-zone-cloud"
-version = "0.1.1"
+version = "0.1.3"
 description = "Read-only Home Assistant integration for ATAG Zone Cloud"
 requires-python = ">=3.13"
 license = "MIT"
